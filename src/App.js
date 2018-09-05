@@ -4,12 +4,13 @@ import './App.css';
 import Page1 from './components/page1';
 // import Page2 from './components/page2';
 // import Page3 from './components/page3';
+import AsyncComponent from './components/AsyncComponent';
 class App extends Component {
   constructor (){
     super();
     this.state={
       route:'Page1',
-      component:''
+      component:null
     }
   }
   onRouteChange=(route)=>{
@@ -33,20 +34,22 @@ class App extends Component {
   }
   render() {
     
-     //  if(this.state.route==='page1'){
-     //  return <Page1  onRouteChange={this.onRoutechange}/>
-     // }      
-     // else if(this.state.route==='page2'){
-     //    return <Page2  onRouteChange={this.onRoutechange}/>
-     // }
-     //  else{
-     //   return <Page3  onRouteChange={this.onRoutechange}/>     
-     //  }
-     if(this.state.route==='Page1'){     
+      if(this.state.route==='page1'){
       return <Page1  onRouteChange={this.onRouteChange}/>
-    }else{
-      return <this.state.component onRouteChange={this.onRouteChange} />
-    }
+     }      
+     else if(this.state.route==='page2'){
+      const AsyncPage2= AsyncComponent(()=> import('./components/page2'));
+        return <AsyncPage2  onRouteChange={this.onRouteChange}/>
+     }
+      else{
+       const AsyncPage3= AsyncComponent(()=> import('./components/page3'));
+        return <AsyncPage3  onRouteChange={this.onRouteChange}/>   
+      }
+    //  if(this.state.route==='Page1'){     
+    //   return <Page1  onRouteChange={this.onRouteChange}/>
+    // }else{
+    //   return <this.state.component onRouteChange={this.onRouteChange} />
+    // }
     
   }
 }
