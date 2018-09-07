@@ -1,0 +1,2 @@
+webpackJsonp([1],{11:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a=n(0),u=n.n(a),r=function(e){var t=e.onRouteChange;return u.a.createElement("div",null,u.a.createElement("button",{onClick:function(){return t("page1")}},"Page1"),u.a.createElement("button",{onClick:function(){return t("page2")}},"Page2"),u.a.createElement("button",{className:"disabled"},"Page3"))};t.default=r}});
+//# sourceMappingURL=1.a97ee461.chunk.js.map
