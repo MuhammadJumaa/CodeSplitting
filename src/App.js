@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Loadable from "react-loadable";
 import Header from "./components/Header";
+import Loadable from "react-loadable";
 import "./App.css";
 //import AsyncComponent from './components/AsyncComponent';
 //import Page1 from './components/page1';
