@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "http://MuhammadJumaa.github.io/CodeSplitting",
+  
   "private": true,
   "dependencies": {
     "react": "^16.4.2",
@@ -20,5 +20,6 @@
   },
   "devDependencies": {
     "gh-pages": "^1.2.0"
-  }
+  },
+  "homepage": "http://MuhammadJumaa.github.io/CodeSplitting"
 }
